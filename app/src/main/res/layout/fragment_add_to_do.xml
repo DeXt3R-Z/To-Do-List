@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="370dp"
+    android:layout_gravity="center"
+    tools:context=".Fragment_addToDo"
+    android:elevation="20dp"
+    android:layout_margin="30dp"
+    android:background="@drawable/add_to_do_screen_bg">
+
+   <EditText
+       android:id="@+id/etAddToDo"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_margin="20dp"
+       android:fontFamily="@font/poppins_semibold"
+       android:gravity="start"
+       android:hint="Add To-Do..."
+       android:textColorHint="@color/super_dark"
+       android:textColor="@color/super_dark"
+       android:backgroundTint="@color/super_dark"
+       android:textSize="20sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/btnAdd"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="ADD"
+       android:fontFamily="@font/poppins_bold"
+       android:textColor="@color/medium"
+       android:background="@drawable/add_to_do"
+       android:elevation="15dp"
+       android:layout_margin="20dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
