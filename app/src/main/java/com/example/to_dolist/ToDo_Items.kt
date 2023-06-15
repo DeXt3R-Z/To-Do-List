@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class ToDo_Items (
     @PrimaryKey (autoGenerate = true)
     var uid: Int,
-    var toDoItem: String
+    var toDoItem: String,
+    var isChecked: Int
 )

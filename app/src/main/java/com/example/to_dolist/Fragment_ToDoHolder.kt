@@ -17,8 +17,16 @@ import kotlinx.coroutines.launch
 class Fragment_ToDoHolder : Fragment() {
 
 
-    lateinit var todoAdapter: ToDo_Adapter
+    var todoAdapter: ToDo_Adapter? = null
 
+    var size: Int = 0
+
+//    companion object{
+//
+//    }
+    fun resetRecyclerView(){
+        todoAdapter?.notifyItemRangeChanged( 0, size-1 )
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,6 +42,7 @@ class Fragment_ToDoHolder : Fragment() {
                 db.toDoDao().getAllToDo().flowOn(Dispatchers.IO).collect{
                     if (it.isNotEmpty())
                     {
+                        size = it.size
                         todoAdapter = ToDo_Adapter(it)
                         recyclerView.adapter = todoAdapter
                         recyclerView.layoutManager = LinearLayoutManager(context.applicationContext)

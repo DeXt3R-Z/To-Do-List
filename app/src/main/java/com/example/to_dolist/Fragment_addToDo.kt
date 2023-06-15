@@ -37,7 +37,7 @@ class Fragment_addToDo : Fragment() {
                 if (txt.text.toString()!="")
                 {
                     GlobalScope.launch() {
-                        db.toDoDao().upsertToDo(ToDo_Items(0,item_toDo))
+                        db.toDoDao().upsertToDo(ToDo_Items(0,item_toDo,0))
                     }
                 }
                 else{
